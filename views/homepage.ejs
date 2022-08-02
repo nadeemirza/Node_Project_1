@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+</head>
+<body>
+    <div>
+        <h1>Todo App :</h1>
+        <span> here you can add your stuff</span>
+        <form action="/" method="post">
+            <label for ="Todo" ></label>
+            <input  name="Todo">
+            <button type="'submit">Add Todo</button>
+        </form>
+        <!-- <% todos.forEach((todo, i)=> { %>
+            <form method="POST" action="/delete/<%= i %>?_method=DELETE">
+                <p>
+                    <%= todo %>
+                </p>
+                <button>Del</button>
+            </form>
+            <% }) %> -->
+            <% todos.forEach((todo , i)=> { %>
+                <form method="post" action="/del/<%= i %>?_method=delete">
+                    <p>
+                        <%= todo %> 
+                    </p>
+                    <button> Delete</button>
+                </form>
+            <% })%>
+    </div>
+</body>
+</html>
